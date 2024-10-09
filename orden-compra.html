@@ -38,8 +38,8 @@
           ></i>
         </div>
         <div class="user-info">
-          <span class="user-name">Nombre Usuario</span>
-          <div class="user-avatar">NU</div>
+          <span class="user-name">INARCO FAVRIC</span>
+          <div class="user-avatar">IN</div>
         </div>
       </div>
     </header>
@@ -47,11 +47,14 @@
     <div class="sidebar">
       <div class="logo-details">
         <div class="user-info">
-          <div class="user-avatar">NU</div>
+          <div class="user-avatar">IN</div>
         </div>
         <span class="user-name">Nombre Usuario</span>
         <span class="user-role">Administrador</span>
-        <span class="user-obra">Obra: <span style="font-weight: bold;">0601</span> Planta Puratos</span>
+        <span class="user-obra"
+          >Obra: <span style="font-weight: bold">0601</span> Planta
+          Puratos</span
+        >
       </div>
       <ul class="nav-links">
         <li>
@@ -59,9 +62,6 @@
             <i class="bx bx-grid-alt"></i>
             <span class="link_name">Dashboard</span>
           </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Category</a></li>
-          </ul>
         </li>
         <li>
           <div class="iocn-link">
@@ -185,7 +185,7 @@
       </div>
       <div
         class="oc-card"
-        style="width: 89%; margin: 40px; margin-left: 40px; height: 200px"
+        style="width: 89%; margin: 20px; margin-left: 40px; height: 200px"
       >
         <div class="oc-header">
           <h2 style="font-size: 14px">ORDEN DE COMPRA</h2>
@@ -235,19 +235,68 @@
           </div>
 
           <!-- Cuarta columna: Título + Input con icono de búsqueda -->
+          <!-- Botón para abrir el popup -->
           <div class="col">
             <label for="search-2">PROVEEDOR</label>
             <div class="input-with-icon">
               <input type="text" id="search-2" placeholder="Buscar..." />
-              <i class="bx bx-search"></i>
+              <i class="bx bx-search" onclick="abrirPopup()"></i>
             </div>
           </div>
+
+          <div id="popup-buscar-proveedor" class="popup">
+            <div class="popup-contenido">
+              <h2>Buscar Proveedor</h2>
+              <div class="popup-cuerpo">
+                <div class="row">
+                  <div class="col-6">
+                    <label>Rut Proveedor</label>
+                    <input
+                      type="text"
+                      id="rut-proveedor"
+                      placeholder="Ingrese rut..."
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label>Nombre Proveedor</label>
+                    <input
+                      type="text"
+                      id="nombre-proveedor"
+                      placeholder="Ingrese nombre..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="popup-pie">
+                <button onclick="cerrarPopup()">Cancelar</button>
+                <button onclick="buscarProveedor()">Buscar</button>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            function abrirPopup() {
+              document.getElementById("popup-buscar-proveedor").style.display =
+                "flex";
+            }
+
+            function cerrarPopup() {
+              document.getElementById("popup-buscar-proveedor").style.display =
+                "none";
+            }
+
+            function buscarProveedor() {
+              // Código para buscar proveedor
+              console.log("Buscar proveedor...");
+              cerrarPopup();
+            }
+          </script>
         </div>
       </div>
 
       <div
         class="oc-card"
-        style="width: 89%; margin: 40px; margin-left: 40px; height: 200px"
+        style="width: 89%; margin: 40px; margin-left: 40px; height: 220px"
       >
         <div class="oc-header">
           <h2 style="font-size: 14px">AGREGAR LÍNEA</h2>
@@ -265,7 +314,10 @@
           <!-- Segunda columna: Título + Input de texto normal -->
           <div class="col">
             <label for="text-input">MEDIDA</label>
-            <input type="text" id="text-input" placeholder="Ingrese texto..." />
+            <select class="measure-selector">
+              <option value="CLP">UNIDAD</option>
+              <option value="UF">UNIDAD</option>
+            </select>
           </div>
 
           <!-- Tercera columna: Título + Input de fecha o calendario -->
@@ -285,7 +337,7 @@
         </div>
         <div class="col text-right">
           <button class="btn btn-agregar">
-            <i class="bx bx-plus"></i> Agregar ítem
+            <i class="bx bx-plus"></i> AÑADIR ITEM
           </button>
         </div>
       </div>
@@ -377,10 +429,12 @@
         <div class="dropdown-content" id="dropdownContent">
           <div class="textarea-row">
             <div class="textarea-column">
-              <textarea placeholder="Escribe tu nota aquí..."></textarea>
+              <span>INGRESO DE NOTAS</span>
+              <textarea placeholder="Agregar Nota"></textarea>
             </div>
             <div class="textarea-column">
-              <textarea placeholder="Escribe otra nota aquí..."></textarea>
+              <span>INGRESO DE INFORMACIÓN ADICIONAL</span>
+              <textarea placeholder="Agregar Nota"></textarea>
             </div>
           </div>
         </div>
@@ -392,9 +446,9 @@
     <!-- Fila para los botones -->
     <div class="row">
       <div class="col text-right">
-        <button class="btn btn-grabar">Grabar</button>
-        <button class="btn btn-limpiar">Limpiar</button>
-        <button class="btn btn-enviar">Enviar a Aprobación</button>
+        <button class="btn btn-grabar">GRABAR</button>
+        <button class="btn btn-limpiar">LIMPIAR</button>
+        <button class="btn btn-enviar">ENVIAR APROBACIÓN</button>
       </div>
     </div>
 
