@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Constructora Vinarco</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo">
+        <img src="assets/logo-inarco.png" alt="Logo Constructora Vinarco" />
+      </div>
+      <div class="login-card">
+        <div class="card-header"></div>
+        <div class="card-content">
+          <h2>LOGIN</h2>
+          <p>Acceder a tu cuenta</p>
+          <form>
+            <div class="input-group">
+              <input type="email" id="email" required />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-group">
+              <input type="password" id="password" required />
+              <label for="password">Password</label>
+            </div>
+
+            <div class="remember-me">
+              <input type="checkbox" id="remember" />
+              <span>Recuérdame</span>
+              <a href="#" class="forgot-password">¿Perdiste tu contraseña?</a>
+            </div>
+
+            <div class="btn-submit">
+              <button type="submit" class="login-btn" onclick="window.location.href='dashboard.html';">LOGIN</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

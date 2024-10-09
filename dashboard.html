@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Orden Compra</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <i class="bx bx-menu"></i>
+        <img src="assets/logo-inarco.png" alt="Logo Constructora Vinarco" />
+      </div>
+      <div class="right-column">
+        <div class="search-container">
+          <input type="text" placeholder="Buscar..." class="search-input" />
+          <i class="icon-search"></i>
+        </div>
+        <div class="icons">
+          <i
+            class="bx bxs-envelope"
+            style="color: #ffffff; font-size: 25px; cursor: pointer"
+          ></i>
+          <i
+            class="bx bxs-bell"
+            style="
+              color: #ffffff;
+              font-size: 25px;
+              margin-left: 10px;
+              cursor: pointer;
+            "
+          ></i>
+        </div>
+        <div class="user-info">
+          <span class="user-name">Nombre Usuario</span>
+          <div class="user-avatar">NU</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <img
+          style="width: 50px; margin-left: 15px"
+          src="assets/logo-wt.png"
+          alt="Logo Constructora Vinarco"
+        />
+        <span style="margin-left: 10px" class="logo_name">INARCO</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Category</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Ordenes de compra</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Ordenes de compra</a></li>
+            <li><a onclick="window.location.href='orden-compra.html';">CREAR OC</a></li>
+            <li><a href="#">APROBAR OC</a></li>
+            <li><a href="#">LISTAR OC</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Recepción</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Recepción</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Login Form</a></li>
+            <li><a href="#">Card Design</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="link_name">Facturas</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Facturas</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-line-chart"></i>
+            <span class="link_name">Informes</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Informes</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-plug"></i>
+              <span class="link_name">Control de inventario</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Control de inventario</a></li>
+            <li><a href="#">UI Face</a></li>
+            <li><a href="#">Pigments</a></li>
+            <li><a href="#">Box Icons</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-compass"></i>
+            <span class="link_name">Mantenedores</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Mantenedores</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Perfil Usuario</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Perfil Usuario</a></li>
+          </ul>
+        </li>
+        <li>
+          <a onclick="window.location.href='login.html';">
+            <i class="bx bx-log-out"></i>
+            <span class="link_name">Cerrar Sesión</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+        <!-- <li>
+          <div class="profile-details">
+            <div class="name-job">
+              <div class="profile_name">Prem Shahi</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div
+        style="
+          width: 89%;
+          padding: 20px 10px 0px 10px;
+          margin: 20px 40px 0px 40px;
+          display: flex;
+          justify-content: space-between;
+        "
+        class="title"
+      >
+        <div class="skeleton-container">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+
+        </div>
+      </div>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement;
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+      function toggleDropdown() {
+        const content = document.getElementById("dropdownContent");
+        const header = document.querySelector(".dropdown-header");
+        content.style.display =
+          content.style.display === "none" || content.style.display === ""
+            ? "block"
+            : "none";
+        header.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

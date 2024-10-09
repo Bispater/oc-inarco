@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Orden Compra</title>
+    <link rel="stylesheet" href="orden-compra.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <i class="bx bx-menu"></i>
+        <img src="assets/logo-inarco.png" alt="Logo Constructora Vinarco" />
+      </div>
+      <div class="right-column">
+        <div class="search-container">
+          <input type="text" placeholder="Buscar..." class="search-input" />
+          <i class="icon-search"></i>
+        </div>
+        <div class="icons">
+          <i
+            class="bx bxs-envelope"
+            style="color: #ffffff; font-size: 25px; cursor: pointer"
+          ></i>
+          <i
+            class="bx bxs-bell"
+            style="
+              color: #ffffff;
+              font-size: 25px;
+              margin-left: 10px;
+              cursor: pointer;
+            "
+          ></i>
+        </div>
+        <div class="user-info">
+          <span class="user-name">Nombre Usuario</span>
+          <div class="user-avatar">NU</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <div class="user-info">
+          <div class="user-avatar">NU</div>
+        </div>
+        <span class="user-name">Nombre Usuario</span>
+        <span class="user-role">Administrador</span>
+        <span class="user-obra">Obra: <span style="font-weight: bold;">0601</span> Planta Puratos</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a onclick="window.location.href='dashboard.html';">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Category</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-collection"></i>
+              <span class="link_name">Ordenes de compra</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Ordenes de compra</a></li>
+            <li><a href="#">CREAR OC</a></li>
+            <li><a href="#">APROBAR OC</a></li>
+            <li><a href="#">LISTAR OC</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-book-alt"></i>
+              <span class="link_name">Recepción</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Recepción</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Login Form</a></li>
+            <li><a href="#">Card Design</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="link_name">Facturas</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Facturas</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-line-chart"></i>
+            <span class="link_name">Informes</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Informes</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="bx bx-plug"></i>
+              <span class="link_name">Control de inventario</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Control de inventario</a></li>
+            <li><a href="#">UI Face</a></li>
+            <li><a href="#">Pigments</a></li>
+            <li><a href="#">Box Icons</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-compass"></i>
+            <span class="link_name">Mantenedores</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Mantenedores</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="link_name">Perfil Usuario</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Perfil Usuario</a></li>
+          </ul>
+        </li>
+        <li>
+          <a onclick="window.location.href='login.html';">
+            <i class="bx bx-log-out"></i>
+            <span class="link_name">Cerrar Sesión</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+        <!-- <li>
+          <div class="profile-details">
+            <div class="name-job">
+              <div class="profile_name">Prem Shahi</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div
+        style="
+          width: 89%;
+          padding: 20px 10px 0px 10px;
+          margin: 20px 40px 0px 40px;
+          display: flex;
+          justify-content: space-between;
+        "
+        class="title"
+      >
+        <h2 style="font-size: 22px; font-weight: 300">
+          INGRESO ORDEN DE COMPRA
+        </h2>
+        <h3 style="font-size: 18px; font-weight: 200">
+          ORDENES DE COMPRA / CREAR OC
+        </h3>
+      </div>
+      <div
+        class="oc-card"
+        style="width: 89%; margin: 40px; margin-left: 40px; height: 200px"
+      >
+        <div class="oc-header">
+          <h2 style="font-size: 14px">ORDEN DE COMPRA</h2>
+          <div class="oc-actions">
+            <!-- Selector de moneda (CLP o UF) -->
+            <select class="currency-selector">
+              <option value="CLP">CLP</option>
+              <option value="UF">UF</option>
+            </select>
+
+            <!-- Recuadro con valor -->
+            <div class="value-box" style="color: #5e5f61; padding-top: 12px">
+              $ 37.800
+            </div>
+
+            <!-- Iconos -->
+            <i
+              class="bx bx-time value-box"
+              style="font-size: 24px; cursor: pointer"
+            ></i>
+            <i
+              class="bx bx-paperclip value-box"
+              style="font-size: 24px; cursor: pointer; margin-left: 10px"
+            ></i>
+          </div>
+        </div>
+        <div class="row form-row">
+          <!-- Primera columna: Título + Input con icono de búsqueda -->
+          <div class="col">
+            <label for="search-1">Nº OC</label>
+            <div class="input-with-icon">
+              <input type="text" id="search-1" placeholder="Buscar..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+
+          <!-- Segunda columna: Título + Input de texto normal -->
+          <div class="col">
+            <label for="text-input">NOMBRE</label>
+            <input type="text" id="text-input" placeholder="Ingrese texto..." />
+          </div>
+
+          <!-- Tercera columna: Título + Input de fecha o calendario -->
+          <div class="col">
+            <label for="date-input">FECHA OC</label>
+            <input type="date" id="date-input" />
+          </div>
+
+          <!-- Cuarta columna: Título + Input con icono de búsqueda -->
+          <div class="col">
+            <label for="search-2">PROVEEDOR</label>
+            <div class="input-with-icon">
+              <input type="text" id="search-2" placeholder="Buscar..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="oc-card"
+        style="width: 89%; margin: 40px; margin-left: 40px; height: 200px"
+      >
+        <div class="oc-header">
+          <h2 style="font-size: 14px">AGREGAR LÍNEA</h2>
+        </div>
+        <div class="row form-row">
+          <!-- Primera columna: Título + Input con icono de búsqueda -->
+          <div class="col">
+            <label for="search-1">CÓDIGO DE PRODUCTO</label>
+            <div class="input-with-icon">
+              <input type="text" id="search-1" placeholder="Buscar..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+
+          <!-- Segunda columna: Título + Input de texto normal -->
+          <div class="col">
+            <label for="text-input">MEDIDA</label>
+            <input type="text" id="text-input" placeholder="Ingrese texto..." />
+          </div>
+
+          <!-- Tercera columna: Título + Input de fecha o calendario -->
+          <div class="col">
+            <label for="date-input">PRECIO UNITARIO</label>
+            <input type="text" id="text-input" placeholder="$" />
+          </div>
+
+          <!-- Cuarta columna: Título + Input con icono de búsqueda -->
+          <div class="col">
+            <label for="search-2">COD. CONTL</label>
+            <div class="input-with-icon">
+              <input type="text" id="search-2" placeholder="Buscar..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col text-right">
+          <button class="btn btn-agregar">
+            <i class="bx bx-plus"></i> Agregar ítem
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="oc-card-detail"
+        style="width: 89%; margin: 40px; margin-left: 40px; padding: 30px"
+      >
+        <div>
+          <h2 style="font-size: 14px">DETALLE / ITEMS OC</h2>
+          <table style="margin-top: 20px">
+            <thead>
+              <tr>
+                <th>LINEA</th>
+                <th>CÓDIGO</th>
+                <th>GLOSA</th>
+                <th>COD. CONTROL</th>
+                <th>MEDIDA</th>
+                <th>CANTIDAD</th>
+                <th>PRECIO U.</th>
+                <th>SUB.TOTAL</th>
+                <th>VALOR $</th>
+                <th>#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td style="color: black; font-weight: bold">MHH020</td>
+                <td>ADITIVO PARA HORMIGON</td>
+                <td>10101</td>
+                <td>UNIDAD</td>
+                <td>1,00</td>
+                <td>1,00</td>
+                <td>1,00</td>
+                <td style="color: black; font-weight: bold">$37.800</td>
+                <td>
+                  <i class="bx bx-edit-alt"></i>
+                  <i class="bx bx-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td style="color: black; font-weight: bold">MHH003</td>
+                <td>HORMIGON</td>
+                <td>10102</td>
+                <td>M3</td>
+                <td>3,00</td>
+                <td>3,00</td>
+                <td>9,00</td>
+                <td style="color: black; font-weight: bold">$340.580</td>
+                <td>
+                  <i class="bx bx-edit-alt"></i>
+                  <i class="bx bx-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td style="color: black; font-weight: bold">MHH007</td>
+                <td>ENSAYES DE HORMIGON</td>
+                <td>10103</td>
+                <td>UNIDAD</td>
+                <td>2,00</td>
+                <td>1,00</td>
+                <td>2,00</td>
+                <td style="color: black; font-weight: bold">$75.685</td>
+                <td>
+                  <i class="bx bx-edit-alt"></i>
+                  <i class="bx bx-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6"></td>
+                <td><strong>Total</strong></td>
+                <td><strong>12,00</strong></td>
+                <td><strong>$454.100</strong></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dropdown-card">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+          <span>Notas</span>
+          <i class="bx bxs-down-arrow"></i>
+        </div>
+        <div class="dropdown-content" id="dropdownContent">
+          <div class="textarea-row">
+            <div class="textarea-column">
+              <textarea placeholder="Escribe tu nota aquí..."></textarea>
+            </div>
+            <div class="textarea-column">
+              <textarea placeholder="Escribe otra nota aquí..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section"></section>
+
+    <!-- Fila para los botones -->
+    <div class="row">
+      <div class="col text-right">
+        <button class="btn btn-grabar">Grabar</button>
+        <button class="btn btn-limpiar">Limpiar</button>
+        <button class="btn btn-enviar">Enviar a Aprobación</button>
+      </div>
+    </div>
+
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement;
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+      function toggleDropdown() {
+        const content = document.getElementById("dropdownContent");
+        const header = document.querySelector(".dropdown-header");
+        content.style.display =
+          content.style.display === "none" || content.style.display === ""
+            ? "block"
+            : "none";
+        header.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
